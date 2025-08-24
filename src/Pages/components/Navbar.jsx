@@ -38,7 +38,6 @@ function Navbar() {
           showNavbar ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        {/* Top Bar sm--> works uunder 640px */}
         <div className=" hidden sm:block w-full h-10 bg-black relative">
           <div className="text-left pl-5 sm:pl-20 pt-2">
             <p className="text-white font-ubuntu text-sm sm:text-base">
@@ -46,24 +45,37 @@ function Navbar() {
             </p>
           </div>
           <div className="absolute right-5 sm:right-20 top-1/2 -translate-y-1/2 flex space-x-4">
-            <img className="w-5 h-5" src="/facebook.png" alt="Facebook" />
-            <img className="w-5 h-5" src="/telephone.png" alt="Telephone" />
-            <img className="w-5 h-5" src="/gmail.png" alt="Gmail" />
-            <img className="w-5 h-5" src="/instagram.png" alt="Instagram" />
+            <img
+              className="w-5 h-5"
+              src="../../../public/facebook.png"
+              alt="Facebook"
+            />
+            <img
+              className="w-5 h-5"
+              src="../../../public/telephone.png"
+              alt="Telephone"
+            />
+            <img
+              className="w-5 h-5"
+              src="../../../public/gmail.png"
+              alt="Gmail"
+            />
+            <img
+              className="w-5 h-5"
+              src="../../../public/instagram.png"
+              alt="Instagram"
+            />
           </div>
         </div>
 
-        {/* Main Navbar */}
         <div className="w-full bg-white shadow-md">
           <div className="container mx-auto px-5 flex items-center justify-between h-20">
-            {/* Logo */}
             <a href="#">
               <p className="text-2xl sm:text-3xl font-ubuntu font-medium">
                 DripCode
               </p>
             </a>
 
-            {/* Desktop Menu */}
             <ul className="hidden 2xl:flex font-ubuntu font-medium space-x-20">
               <Link to="/">
                 <li>Home</li>
@@ -85,16 +97,20 @@ function Navbar() {
               </Link>
             </ul>
 
-            {/* Right Icons */}
             <div className="hidden 2xl:flex space-x-7 ">
-              <a href="#">
-                <img className="w-6 h-6" src="/search.png" alt="Search" />
-              </a>
-              <a href="#">
-                <img className="w-6 h-6" src="/people.png" alt="User" />
-              </a>
+              <Link to="/product_details">
+                <img
+                  className="w-6 h-6"
+                  src="../../../public/people.png"
+                  alt="User"
+                />
+              </Link>
               <Link to="/cart">
-                <img className="w-6 h-6" src="/shopping-bag.png" alt="Cart" />
+                <img
+                  className="w-6 h-6"
+                  src="../../../public/shopping-bag.png"
+                  alt="Cart"
+                />
                 {cart.length > 0 && (
                   <span
                     style={{
@@ -113,8 +129,6 @@ function Navbar() {
                 )}
               </Link>
             </div>
-
-            {/* Mobile Menu Toggle */}
 
             <button
               className="2xl:hidden"
@@ -167,13 +181,18 @@ function Navbar() {
 
               <div className="flex justify-center item-center space-x-10 pt-7">
                 <a href="#">
-                  <img className="w-6 h-6" src="/search.png" alt="Search" />
-                </a>
-                <a href="#">
-                  <img className="w-6 h-6" src="/people.png" alt="User" />
+                  <img
+                    className="w-6 h-6"
+                    src="../../../public/people.png"
+                    alt="User"
+                  />
                 </a>
                 <Link to="/cart">
-                  <img className="w-6 h-6" src="/shopping-bag.png" alt="Cart" />
+                  <img
+                    className="w-6 h-6"
+                    src="../../../public/shopping-bag.png"
+                    alt="Cart"
+                  />
                 </Link>
               </div>
             </div>

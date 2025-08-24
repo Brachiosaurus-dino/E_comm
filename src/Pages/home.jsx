@@ -148,7 +148,6 @@ function Home() {
         <div className="bg-gray-400"></div>
         <div className="bg-white w-full py-20">
           <div className="container mx-auto px-4 sm:px-8">
-            {/* Heading */}
             <div className=" text-center">
               <p className="font-ubuntu font-bold text-sm sm:text-base">
                 Checkout latest products
@@ -158,7 +157,6 @@ function Home() {
               </p>
             </div>
 
-            {/* Product Grid */}
             <div className="pt-10 sm:pt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               {catalogs.map((catalog) => (
                 <div key={catalog.id} className="flex flex-col h-full">
@@ -170,7 +168,6 @@ function Home() {
                     />
                   </div>
 
-                  {/* Texts */}
                   <p className="text-lg sm:text-xl pt-5 font-bold text-black font-ubuntu">
                     {catalog.caption1}
                   </p>
@@ -181,10 +178,9 @@ function Home() {
                     {catalog.caption3}
                   </p>
 
-                  {/* Spacer + Button */}
                   <div className="mt-auto pt-4">
                     <button
-                      className="w-full sm:w-40 cursor-pointer bg-red-600 text-black font-bold font-ubuntu h-10"
+                      className="w-full sm:w-40 cursor-pointer bg-blue-400 text-white hover:bg-white hover:text-black transition duration-300 font-bold font-ubuntu h-10"
                       onClick={() =>
                         addToCart({
                           id: catalog.id,
